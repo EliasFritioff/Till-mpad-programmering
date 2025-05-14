@@ -1,7 +1,13 @@
-#TODO:   1.s lägg till or (w,a,s,d) för att röra sig
+#TODO:   1. lägg till or (w,a,s,d) för att röra sig
 
 import pygame
 import random
+import os
+
+# Initializing pygame
+pygame.init()
+
+# Replace your current show_monsterdeath_animation function with the new one
 
 # Initiera pygame, mixer
 pygame.init()
@@ -29,8 +35,10 @@ PURPLE = (200, 0, 200)
 player_size = 60 #storlek 60
 monster_size = 60 #storlek 60
 potion_size = 60 #storlek 60
+monsterdeath_size = 300 #storlek 300
 
 # Ladda sprites
+
 try:
     player_img = pygame.image.load("player.png")
     player_img = pygame.transform.scale(player_img, (player_size, player_size))
@@ -52,12 +60,23 @@ except FileNotFoundError:
     potion_img = pygame.Surface((potion_size, potion_size))
     potion_img.fill(PURPLE)
 
+try:
+    monsterdeath_gif = pygame.image.load("monsterdeath.gif")
+    monsterdeath_gif = pygame.transform.scale(monsterdeath_gif, (monsterdeath_size, monsterdeath_size))
+except FileNotFoundError:
+    print("Filen monsterdeath.gif hittades inte!")
+    monsterdeath_gif = pygame.Surface((monsterdeath_size, monsterdeath_size))
+    monsterdeath_gif.fill(RED)
+
 # Typsnitt
 font = pygame.font.Font(None, 36)
 
 def draw_text(text, x, y, color=WHITE):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, (x, y))
+
+def show_monsterdeath_animation():
+    pygame_gif.play(monsterdeath_gif, (100, 300))    
 
 # Spelklasser
 class Player:
@@ -135,6 +154,8 @@ def battle(player, monster):
                 if monster.health <= 0:
                     player.gain_xp(10)
                     screen.fill(BLACK)  # Rensa skärmen så inga gamla texter syns
+                    monsterdeath_gif = pygame.Surface((monsterdeath_size, monsterdeath_size))
+                    screen.blit(monsterdeath_gif, (100, 300))
                     draw_text("You killed the monster!", 50, 300, GREEN)  # Ändra till grön om det är en vinst
                     pygame.mixer.Sound.play(death_sound)
                     pygame.display.flip()

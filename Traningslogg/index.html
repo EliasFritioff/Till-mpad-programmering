@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="js/script.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img src="../img/Logo.png" alt="GymLogger Logo">
+        <p class="PL">Welcome!</p>
+    </header>
+<div class="main">
+    <form id="loginForm">
+        <label for="first">
+            Email adress
+        </label>
+        <input type="text" id="first" name="first" 
+            placeholder="name@example.com" required>
+
+        <label class="password-label" for="password">
+            Password
+        </label>
+        <input type="password" id="myInput" name="password" 
+        placeholder="Password" required>
+
+        <input type="checkbox" id="showPassword"> Show Password
+
+        <div class="wrap">
+            <button class="Login-Button" type="submit">
+                Log in
+            </button>
+        </div>
+    </form>
+    
+    <p>Not registered?
+        <a href="../pages/register.html" style="text-decoration: none;">
+            Create an account
+        </a>
+    </p>
+</div>
+</body>
+</html>

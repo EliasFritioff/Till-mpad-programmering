@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lägg till Övning</title>
+  <link rel="stylesheet" href="../css/addexercise.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Skapa Ny Övning</h1>
+    <form id="exerciseForm">
+      <input type="text" id="name" placeholder="Namn på övning" required />
+      <input type="text" id="equipment" placeholder="Utrustning (t.ex. Dumbbell)" required />
+      <input type="text" id="bodyPart" placeholder="Muskelgrupp (t.ex. Chest)" required />
+      <button type="submit">Spara Övning</button>
+    </form>
+    <p id="statusMsg"></p>
+  </div>
+
+  <script>
+    document.getElementById("exerciseForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+  
+      const name = document.getElementById("name").value.trim();
+      const equipment = document.getElementById("equipment").value.trim();
+      const bodyPart = document.getElementById("bodyPart").value.trim();
+      const statusMsg = document.getElementById("statusMsg");
+  
+      if (!name || !equipment || !bodyPart) {
+        statusMsg.textContent = "Alla fält måste fyllas i.";
+        return;
+      }
+  
+      const newExercise = { name, equipment, bodyPart };
+  
+      try {
+        const res = await fetch("/api/exercises", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(newExercise)
+        });
+  
+        const result = await res.json();
+        if (res.ok) {
+          window.location.href = "/pages/exercises.html"; // 👈 Redirect till listan
+        } else {
+          statusMsg.textContent = "❌ Fel: " + result.error;
+        }
+      } catch (err) {
+        statusMsg.textContent = "❌ Fel vid anslutning till servern.";
+        console.error(err);
+      }
+    });
+  </script>  
+</body>
+</html>

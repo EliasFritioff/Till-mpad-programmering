@@ -1,0 +1,6 @@
+BgColor: #F2EFE7
+BgColor: #9ACBD0
+Övrigt: #48A6A7
+Header: #006A71
+
+colorhunt länk: https://colorhunt.co/palette/f2efe79acbd048a6a7006a71

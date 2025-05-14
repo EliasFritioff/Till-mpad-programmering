@@ -1,0 +1,87 @@
+[
+  {
+    "date": "Thu May 08 2025",
+    "exercises": [
+      {
+        "name": "Bench Press",
+        "sets": 4,
+        "reps": 8,
+        "weight": 80
+      },
+      {
+        "name": "Squat",
+        "sets": 3,
+        "reps": 10,
+        "weight": 100
+      }
+    ]
+  },
+  {
+    "date": "Thu May 08 2025",
+    "exercises": [
+      {
+        "name": "Bench Press",
+        "sets": 4,
+        "reps": 8,
+        "weight": 80
+      },
+      {
+        "name": "Squat",
+        "sets": 3,
+        "reps": 10,
+        "weight": 100
+      }
+    ]
+  },
+  {
+    "date": "Thu May 08 2025",
+    "exercises": [
+      {
+        "name": "Bench Press",
+        "sets": 4,
+        "reps": 8,
+        "weight": 80
+      },
+      {
+        "name": "Squat",
+        "sets": 3,
+        "reps": 10,
+        "weight": 100
+      }
+    ]
+  },
+  {
+    "date": "Thu May 08 2025",
+    "exercises": [
+      {
+        "name": "Bench Press",
+        "sets": 4,
+        "reps": 8,
+        "weight": 80
+      },
+      {
+        "name": "Squat",
+        "sets": 3,
+        "reps": 10,
+        "weight": 100
+      }
+    ]
+  },
+  {
+    "date": "Thu May 08 2025",
+    "exercises": [
+      {
+        "name": "Bench Press",
+        "sets": 4,
+        "reps": 8,
+        "weight": 80
+      },
+      {
+        "name": "Squat",
+        "sets": 3,
+        "reps": 10,
+        "weight": 100
+      }
+    ]
+  }
+]

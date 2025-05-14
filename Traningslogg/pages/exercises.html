@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercises</title>
+  <link rel="stylesheet" href="../css/exercises.css" />
+  <script src="../js/script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="profile.html">Profile</a>
+    <a href="workout.html">Workout</a>
+    <a href="history.html">History</a>
+    <a class="active" href="exercises.html">Exercises</a>
+  </nav>
+
+  <main>
+    <h1>Exercises</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search">
+      </a>
+    </div>
+    <div class="filters">
+    <select name="muscle" id="muscleFilter">
+      <option value="" disabled selected hidden>Muscle Group</option>
+      <option>Abs</option>
+      <option>Back</option>
+      <option>Bicep</option>
+      <option>Chest</option>
+      <option>Legs</option>
+      <option>Shoulders</option>
+      <option>Tricep</option>
+    </select>
+    <select name="equipment" id="equipmentFilter">
+      <option value="" disabled selected hidden>Equipment</option>
+      <option>Barbell</option>
+      <option>Bodyweight</option>
+      <option>Cable</option>
+      <option>Kettlebell</option>
+      <option>Machine</option>
+    </select>
+    <a href="addexercise.html">
+    <button id="new-button">Add new exercise</button>
+    </a>
+    </div>
+    <ul id="exercise-list"></ul>
+  </main>
+
+  <script src="../js/exercises.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="../js/script.js" defer></script>
+    <title>TrainingLogger</title>
+</head>
+<body> 
+    <header>
+        <nav>
+            <img src="../img/Logo.png" alt="GymLogger Logo">
+            <ul class="primary-navigation">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="../pages/workout.html">Workout</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="../pages/exercises.html">Excersises</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <h1>Profile</h1>
+            <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>Username:</strong> <span id="userName"></span></p>
+
+            <h3>Weight Unit:</h3>
+            <div id="weightUnitSelection">
+                <button id="metricButton" class="unit-button active">Metric (kg)</button>
+                <button id="imperialButton" class="unit-button">Imperial (lbs)</button>
+            </div>
+
+            <button id="logoutButton" class="logout-button">Log out</button>
+        </div>
+    </main>
+</body>
+</html>

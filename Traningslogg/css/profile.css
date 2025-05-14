@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    font-size: 15px;
+    background-color: #F2EFE7;
+    text-align: center;
+}
+
+header {
+    background-color: #006A71;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.primary-navigation {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #F2EFE7;
+}
+
+a:hover {
+    color: #cdcbc5;
+}
+
+img {
+    max-width: 125px;
+    max-height: fit-content;
+}
+
+.profile-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#weightUnitSelection {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.unit-button {
+    padding: 10px 20px;
+    border: 2px solid #006A71;
+    background-color: white;
+    color: #006A71;
+    border-radius: 0px 0px 0px 0px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.unit-button.active {
+    background-color: #006A71;
+    color: white;
+}
+
+.unit-button:hover {
+    background-color: #004f53;
+    color: white;
+}
+
+.logout-button {
+    background-color: rgba(255, 0, 0, 0.669);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background-color: darkred;
+}
